@@ -1,0 +1,90 @@
+.middle {
+    background-color: $gray-50;
+}
+
+.content-middle {
+    display: grid;
+    @include for-tablet-landscape-up {
+        grid-template-columns: 8fr 4fr;
+    }
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    height: 100%;
+    margin: 0;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    .artikel {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        padding-bottom: 3rem;
+        .block-artikel {
+            display: flex;
+            flex-direction: column;
+            @include for-tablet-landscape-up {
+                flex-direction: row;
+            }
+            background-color: $white;
+            padding: 1rem;
+            border-radius: $border-radius-md;
+            // box-shadow: $shadow;
+            height: max-content;
+            margin-bottom: 1rem;
+        }   
+        .image {
+            @include for-tablet-landscape-up {
+                width: 14rem;
+                height: 7rem;
+            }
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            object-fit: cover;
+            // width : 100%;
+        }
+        .block-artikel-text {
+            padding-right: 2rem;
+            padding-top: 2rem;
+            @include for-tablet-landscape-up {
+                padding-left: 2rem;
+                padding-top: 0rem;
+            }
+            
+            .link {
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #666666;
+            }
+            .block-artikel-title {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                display: block;
+                font-weight: $font-bold;
+                color: $gray-900;
+            }
+            .tanggal , .penulis, .devider{
+                color: $gray-500;
+                font-weight: $font-semibold;
+                font-size: 0.75rem;
+                line-height: 1rem;
+            }
+            .block-artikel-desc{
+                color: $gray-700;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .aside {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 12px;
+   }
+   .block-aside {
+        // background-color: green;
+        justify-content : center;
+        align-items: center; 
+        color : white;
+    }
+}

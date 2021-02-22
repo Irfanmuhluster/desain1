@@ -1,0 +1,342 @@
+header {
+    width: 100%;
+}
+
+.navbar-fixed {
+    // position: fixed;
+    color: $white;
+    background-color: transparent;
+    @include max-table-down {
+        background-color: white;
+        color: $gray-700;
+    }
+}
+
+.text-color-white {
+    color : $white;
+}
+
+.text-color-black {
+    color : $gray-700;
+    @include max-table-down {
+        color: white;
+    }
+}
+
+.is-active {
+    display: block !important;
+}
+
+.navbar-sticky {
+    // position: fixed;
+    background-color: $white;
+    color: $gray-700;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+    padding-right: 1.5rem;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: $shadow-lg;
+    .navbar-logo {
+        padding-bottom: 1.25rem;
+        background-color: transparent;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .logo {
+            @include text-base();
+            padding-top: 1.25rem;
+            font-weight: $font-bold;
+            letter-spacing: $tracking-wide;
+        }
+    }
+    .navbar-btn {
+        display: flex;
+        margin-left: auto;
+        @include max-table-down {
+            position: fixed;
+            top: 4rem;
+            width: 100%;
+            background-color: $blue-400;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            overflow-x: hidden;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: .65s;
+            max-height: 350px;
+        }
+
+        .navbar-links {
+            flex: 1 1 auto;
+            background-color: transparent;
+
+            @include max-table-down {
+                flex: initial;
+                width: 100%;
+                background-color: $gray-500;
+                ul {
+                    flex-direction: column;
+                }
+            }
+
+            .dropdown-toggle{
+                &::after {
+                    display: inline-block;
+                    margin-left: .255em;
+                    vertical-align: .055em;
+                    content: "";
+                    border-top: .3em solid;
+                    border-right: .3em solid transparent;
+                    border-bottom: 0;
+                    border-left: .3em solid transparent;
+                    @include max-table-down {
+                        font-size: 1.1rem;
+                        transform: rotate(-90deg);
+                        transition: .7s;
+                    }
+                }
+            }
+            
+            @include max-table-down {
+                .is-active::after {
+                    transform: rotate(0deg) !important;
+                    transition: .7s;
+                }
+            } 
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                .nav-link { 
+                    position: relative;
+                    @include max-table-down {
+                        width: 100%;
+                        // &:hover > a {
+                        //     transform: scale(1);
+                        //     background-color: $gray-600;
+                        // }
+                    }
+                    a {
+                        @include text-lg();
+                        text-decoration: none;
+                        padding-top: 1.25rem;
+                        padding-bottom: 1.25rem;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        display: block;
+                        transition: 0.5s;
+                        // @include for-tablet-landscape-up {
+                            &:hover {
+                                transform: scale(1.02);
+                            }
+                        // }
+                        @include max-table-down {
+                            line-height: 1;
+                            padding: 1.6rem 2rem;
+                        }
+                    }
+                    .dropdown {
+                        position: absolute;
+                        border-radius: 0.25rem;
+                        top: 100%;
+                        left: 0;
+                        width: 8rem;
+                        background-color: white;
+                        transform: translateY(10px);
+                        opacity: 0;
+                        pointer-events: none;
+                        transform-origin: top right;
+                        transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+                        // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                        transition-duration: 250ms;
+                        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+
+                        @include max-table-down {
+                            background-color: white;
+                            position: initial;
+                            top: initial;
+                            left: initial;
+                            transform: initial;
+                            pointer-events: initial;
+                            width: 100%;
+                            padding: 0;
+                            opacity: 1;
+                            display: none;
+                        }
+                        .dropdown-menu {
+                            list-style: none;
+                            position: relative;
+                            .dropdown-link {
+                                position: relative;
+                                a {
+                                    display: flex;
+                                    color: $gray-600;
+                                    width: 100%;
+                                    padding-top: 0.5rem;
+                                    padding-bottom: 0.5rem;
+                                    padding-left: 1rem;
+                                    padding-right: 1rem;
+                                    text-align: center;
+                                    justify-content: space-between;
+                                    @include max-table-down {
+                                        background-color: transparent;
+                                        color: $gray-700;
+                                        padding: 1.2rem 2rem;
+                                        text-align: left;
+                                    }
+                                    &:hover {
+                                        color : $yellow-400;
+                                        background-color: $gray-100;
+                                        transition: .2s;
+                                        transform: none;
+                                    }
+                                }
+                                .dropdown-toggle {
+                                    &::after {
+                                        @include for-tablet-landscape-up {
+                                            transform: rotate(-90deg);
+                                            position: absolute;
+                                            right: 0;
+                                            bottom: 0;
+                                            padding-bottom: 2.2rem;
+                                        }
+                                        @include max-table-down {
+                                            position: absolute;
+                                            bottom: initial;
+                                            right: 0;         
+                                        }
+                                       
+                                    }
+                                }    
+                            }
+                            .dropdown-link:first-child:hover ~ .arrow {
+                                background-color: $gray-100;
+                            }
+                            .arrow {
+                                position: absolute;
+                                width: 11px;
+                                height: 11px;
+                                top: -5.5px;
+                                left: 32px;
+                                background-color: #ffffff;
+                                transform: rotate(45deg);
+                                cursor: pointer;
+                                transition: .2s;
+                                @include max-table-down {
+                                    z-index: 1;
+                                    left: 10%;
+                                    transform: scale(1.02) rotate(45deg);
+                                    transition: .5s;
+                                }
+                            }
+                        }
+                        .second {
+                            top: 0;
+                            left: 107%;
+                            cursor: pointer;
+                            transform: translateX(10px);
+                            @include max-table-down {
+                                position: initial;
+                                top: initial;
+                                left: initial;
+                                transform: initial;
+                                pointer-events: initial;
+                                width: 100%;
+                                padding: 0;
+                                display: none;
+                                .dropdown-link > a {
+                                    padding: 1.2rem 2rem 1.2rem 3rem;
+                                }
+                            }
+                            .arrow {
+                                left: -5.5px;
+                                top: 10px;
+                                @include max-table-down {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    &:hover > .dropdown, 
+                    .dropdown-link:hover > .dropdown {
+                        @include for-tablet-landscape-up {
+                            transform: translate(0,0);                            
+                            opacity: 1;
+                            pointer-events: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hambergur-menu-container {
+        flex: 1;
+        display: none;
+        align-items: center;
+        justify-content: flex-end;
+        @include max-table-down {
+            display: flex;
+        }
+        .hambergur-menu {
+            width: 2.5rem;
+            height: 2.5rem;
+            color: $gray-700;
+            align-items: center;
+            justify-content: center;
+            @include max-table-down {
+                color: $gray-700;
+            }
+        }
+    }
+    .search {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        width: 92%;
+        border-radius: $border-radius-lg;
+        height: 2.5rem;
+        color: $gray-700;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        border: 1px solid gainsboro;
+        &:focus {
+            opacity: 0.6;
+            box-shadow: inset 0 0 0 calc(2px + 0px) $coolGray-400;
+        }
+    }
+    .nav-link-search {
+        position: absolute;
+        top: 1.5rem;
+        right: 5rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        width: 30rem;
+        .nav-link-button {
+            background-color: transparent;
+            color: $gray-700;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+    .collapsible {
+        background-color: transparent;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

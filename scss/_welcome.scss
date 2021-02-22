@@ -1,0 +1,57 @@
+.welcome {
+    display: flex;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    .card-welcome {
+        @include for-tablet-landscape-up {
+            display: flex;
+        }
+        flex: 1 1 0%;
+        width: 100%;
+        border-radius: $border-radius-xl;
+        box-shadow: $shadow-md;
+        background-color: $coolGray-50;
+        overflow: hidden;
+        @include max-table-down {
+            padding: 2rem;
+        }
+        @include for-tablet-landscape-up {
+            padding: 0rem;
+        }
+        .card-welcome-img {
+            width: 14rem;
+            height: auto;
+            border-radius: 0px;
+            object-fit: cover;
+            @include max-table-down {
+                border-radius: $border-radius-full;
+                width: 18rem;
+                height: 18rem;
+                padding: 1.5rem;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+        }
+        .card-welcome-quotes {
+            text-align: left;
+            padding: 2rem;
+            .card-welcome-by {
+                font-weight: $font-medium;
+                color: $cyan-600;
+            }
+            .card-welcome-level {
+                color: $gray-500;
+            }
+            .card-title {
+                font-weight: $font-bold;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+        }
+    }
+}
+

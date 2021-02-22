@@ -1,0 +1,36 @@
+footer {
+    display: grid;
+    padding: 3rem;
+    color: $coolGray-300;
+    @include for-tablet-landscape-up {
+        grid-template-columns: 4fr 4fr 4fr;
+    }
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    height: 100%;
+    background-color: #343a40;
+    margin: 0;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    .footer-contact {
+        margin: 1rem 0;
+        .link {
+            // text-decoration: none;
+            color: $coolGray-300 !important;
+        }
+    }
+    .menu-bawah {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.copyright {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    background-color: #0e7490;
+    font-weight: 600;
+    text-align: center;
+    color: $coolGray-50;
+}
