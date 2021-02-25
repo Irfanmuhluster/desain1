@@ -23,6 +23,10 @@ footer {
         display: flex;
         flex-direction: column;
     }
+    .peta {
+        width: 100%;
+        overflow: hidden;
+    }
 }
 .copyright {
     padding-left: 2.5rem;
