@@ -16,7 +16,7 @@
         background-color: $coolGray-50;
         overflow: hidden;
         @include max-table-down {
-            padding: 2rem;
+            padding: 0rem;
         }
         @include for-tablet-landscape-up {
             padding: 0rem;
@@ -27,7 +27,7 @@
             border-radius: 0px;
             object-fit: cover;
             @include max-table-down {
-                border-radius: $border-radius-full;
+                // border-radius: $border-radius-full;
                 width: 18rem;
                 height: 18rem;
                 padding: 1.5rem;
