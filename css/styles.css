@@ -795,7 +795,7 @@ header {
         display: flex; } }
     @media (max-width: 900px) {
       .welcome .card-welcome {
-        padding: 2rem; } }
+        padding: 0rem; } }
     @media (min-width: 900px) {
       .welcome .card-welcome {
         padding: 0rem; } }
@@ -806,7 +806,7 @@ header {
       object-fit: cover; }
       @media (max-width: 900px) {
         .welcome .card-welcome .card-welcome-img {
-          border-radius: 9999px;
+          border-radius: 2rem;
           width: 18rem;
           height: 18rem;
           padding: 1.5rem;
@@ -1021,6 +1021,9 @@ footer {
   footer .menu-bawah {
     display: flex;
     flex-direction: column; }
+  footer .peta {
+    width: 100%;
+    overflow: hidden; }
 
 .copyright {
   padding-left: 2.5rem;

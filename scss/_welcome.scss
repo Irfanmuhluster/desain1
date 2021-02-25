@@ -27,7 +27,7 @@
             border-radius: 0px;
             object-fit: cover;
             @include max-table-down {
-                // border-radius: $border-radius-full;
+                border-radius: 2rem;
                 width: 18rem;
                 height: 18rem;
                 padding: 1.5rem;
