@@ -365,7 +365,7 @@ header {
 
 .navbar-fixed {
   color: #ffff;
-  background-color: transparent; }
+  background-color: rgba(119, 136, 153, 0.5); }
   @media (max-width: 900px) {
     .navbar-fixed {
       background-color: white;
