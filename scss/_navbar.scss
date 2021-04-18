@@ -322,15 +322,15 @@ header {
     .nav-link-search {
         position: absolute;
         top: 1.5rem;
-        right: 5rem;
+        // right: 5rem;
         background-color: #fff;
         border-radius: 0.5rem;
-        width: 30rem;
+        width: auto;
+        display: block;
         .nav-link-button {
             background-color: transparent;
             color: $gray-700;
-            font-size: 1rem;
-            line-height: 1.5rem;
+            @include text-sm();
         }
     }
     .collapsible {
