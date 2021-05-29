@@ -12,8 +12,8 @@
         flex: 1 1 0%;
         width: 100%;
         border-radius: $border-radius-xl;
-        box-shadow: $shadow-md;
-        background-color: $coolGray-50;
+        box-shadow: $shadow-lg;
+        background-color: white;
         overflow: hidden;
         @include max-table-down {
             padding: 0rem;

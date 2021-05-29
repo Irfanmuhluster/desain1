@@ -35,6 +35,9 @@ a {
   a:hover {
     color: #ffb606 !important; }
 
+h1 {
+  font-size: 1.875rem; }
+
 .inline-block {
   display: inline-block; }
 
@@ -805,8 +808,8 @@ header {
     flex: 1 1 0%;
     width: 100%;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    background-color: #f9fafb;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background-color: white;
     overflow: hidden; }
     @media (min-width: 900px) {
       .welcome .card-welcome {
@@ -843,9 +846,6 @@ header {
         font-weight: 700;
         font-size: 1.125rem;
         line-height: 1.75rem; }
-
-.middle {
-  background-color: #fafafa; }
 
 .content-middle {
   display: grid;
